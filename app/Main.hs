@@ -5,6 +5,8 @@ import qualified Ausweis.NonDependent as AN
 
 main :: IO ()
 main = do
+  hSetBuffering stdout NoBuffering
+
   putStrLn "Без зависимых типов:"
   AN.main
 

@@ -9,7 +9,6 @@ import Data.Coerce (coerce)
 
 import Data.Text (Text)
 import qualified Data.Text.IO as T
-import System.IO (hSetBuffering, stdout, BufferMode(NoBuffering))
 
 import Ausweis.Common
 import Ausweis.Common.Types
@@ -73,8 +72,6 @@ ausweis _ _ = "Тип цели не соответствует введенны�
 
 main :: IO ()
 main = do
-  hSetBuffering stdout NoBuffering
-
   goalType <- getGoalType
   case goalType of
     Work -> do

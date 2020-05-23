@@ -9,7 +9,6 @@ module Ausweis.Dependent
 import Data.Constraint (Dict(Dict))
 
 import qualified Data.Text.IO as T
-import System.IO (hSetBuffering, stdout, BufferMode(NoBuffering))
 
 import Ausweis.Common
 import Ausweis.Common.Types
@@ -23,6 +22,4 @@ printAusweis gt = withSomeSGoalType (toSGoalType gt) $ \(sg :: SGoalType g) ->
 
 main :: IO ()
 main = do
-  hSetBuffering stdout NoBuffering
-
   printAusweis =<< getGoalType
