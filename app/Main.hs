@@ -1,5 +1,7 @@
 module Main where
 
+import System.IO (hSetBuffering, stdout, BufferMode(NoBuffering))
+
 import qualified Ausweis.Dependent as AD
 import qualified Ausweis.NonDependent as AN
 
