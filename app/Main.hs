@@ -9,8 +9,8 @@ main :: IO ()
 main = do
   hSetBuffering stdout NoBuffering
 
-  putStrLn "Без зависимых типов:"
-  AN.main
+  -- without dependent types
+  -- AN.main
 
-  putStrLn "\nС зависимыми типами:"
+  -- with dependent types
   AD.main
