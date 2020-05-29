@@ -45,5 +45,5 @@ Then you could run application with:
 ```zsh
 $ ausweis
 ```
-If of course a path `~/.cabal/bin` is presented in the `PATH` environment
+If of course a path `~/.cabal/bin` is present in the `PATH` environment
 variable.
