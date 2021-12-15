@@ -4,7 +4,7 @@ cabal-version:       2.4
 
 name:                ausweis
 version:             0.0.1.0
-synopsis:            SMS text for ausweis during quarantine in Moscow
+synopsis:            SMS text for ausweis during the quarantine in Moscow
 -- description:
 homepage:            https://github.com/ushfnuk/ausweis
 bug-reports:         https://github.com/ushfnuk/ausweis/issues

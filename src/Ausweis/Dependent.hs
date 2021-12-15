@@ -16,9 +16,9 @@ import Ausweis.Dependent.Types
 
 
 printAusweis :: GoalType -> IO ()
-printAusweis gt = withSomeSGoalType (toSGoalType gt) $ \(sg :: SGoalType g) ->
+printAusweis gt = withSomeSGoalType gt $ \(sg :: SGoalType g) ->
   case dict @ClassInfo sg of
-    Dict -> T.putStrLn =<< ("\nВаш пропуск: " <>) . ausweis @g sg <$> getInfo
+    Dict -> T.putStrLn . ("\nВаш пропуск: " <>) . ausweis @g sg =<< getInfo
 
 main :: IO ()
 main = do

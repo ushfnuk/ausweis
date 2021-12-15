@@ -49,10 +49,10 @@ data SomeSGoalType where
   SomeSGoalType :: SGoalType g -> SomeSGoalType
 
 withSomeSGoalType
-  :: SomeSGoalType
+  :: GoalType
   -> (forall (g :: GoalType). SGoalType g -> r)
   -> r
-withSomeSGoalType (SomeSGoalType s) f = f s
+withSomeSGoalType g f = case toSGoalType g of SomeSGoalType s -> f s
 
 toSGoalType :: GoalType -> SomeSGoalType
 toSGoalType Work    = SomeSGoalType SWork
