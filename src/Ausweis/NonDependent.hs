@@ -76,10 +76,10 @@ main = do
   case goalType of
     Work -> do
       let company = getCompany Company
-      T.putStrLn =<< ausweis goalType <$> company
+      T.putStrLn . ausweis goalType =<< company
     Medical -> do
       let medical = getMedicalOrganization MedicalOrganization
-      T.putStrLn =<< ausweis goalType <$> medical
+      T.putStrLn . ausweis goalType =<< medical
     Other -> do
       let destination = getDestination Destination
-      T.putStrLn =<< ausweis goalType <$> destination
+      T.putStrLn . ausweis goalType =<< destination

@@ -1,14 +1,11 @@
-{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RankNTypes #-}
-{-# LANGUAGE KindSignatures #-}
 {-# LANGUAGE DataKinds #-}
 {-# LANGUAGE GADTs #-}
-{-# LANGUAGE TypeFamilies #-}
-{-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE TypeFamilyDependencies #-}
 {-# LANGUAGE ConstraintKinds #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE RecordWildCards #-}
+{-# LANGUAGE LambdaCase #-}
 
 module Ausweis.Dependent.Types
   (
@@ -135,9 +132,10 @@ dict
      )
   => SGoalType b
   -> Dict (c b)
-dict SWork    = Dict
-dict SMedical = Dict
-dict SOther   = Dict
+dict = \case
+  SWork    -> Dict
+  SMedical -> Dict
+  SOther   -> Dict
 
 
 data Company = Company !Common !Enn !Name
