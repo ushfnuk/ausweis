@@ -20,7 +20,7 @@ a difference between two approaches to write an application:
   * and not using them
 
 If you want to see that difference you could change `app/Main.hs` by
-commenting/uncommening `AD.main` or `AN.main` and reinstall application
+comment/uncomment `AD.main` or `AN.main` and reinstall application
 with `cabal install`.
 The output will be the same because the difference lies inside the source code,
 so you probably want to also check a `src` directory too.
@@ -45,5 +45,5 @@ Then you could run application with:
 ```zsh
 $ ausweis
 ```
-If of course a path `~/.cabal/bin` is present in the `PATH` environment
+If of course the path `~/.cabal/bin` is present in the `PATH` environment
 variable.
